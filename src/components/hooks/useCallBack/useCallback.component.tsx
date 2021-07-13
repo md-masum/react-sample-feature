@@ -7,13 +7,13 @@ const UseCallbackComponent = (props: any) => {
     const[age, setAge] = React.useState<number>(25);
     const[salary, setSalary] = React.useState<number>(20000); 
 
-    const incrementAge = () => {
+    const incrementAge = React.useCallback(() => {
         setAge(age + 1)
-    }
+    }, [age])
 
-    const incrementSalary = () => {
+    const incrementSalary = React.useCallback(() => {
         setSalary(salary + 1000);
-    }
+    }, [salary])
 
     // const incrementAge = React.useCallback(() => {
     //     setAge(age + 1)

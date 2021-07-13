@@ -12,23 +12,23 @@ const UseMemoComponent = (props: any) => {
         setCounterTwo(counterTwo + 1);
     }
 
-    const isEven = () => {
-        let i = 0
-        while (i < 2000000000) i++
-        return counterOne % 2 === 0
-    }
-
-    // const isEven = React.useMemo(() => {
+    // const isEven = () => {
     //     let i = 0
     //     while (i < 2000000000) i++
     //     return counterOne % 2 === 0
-    // }, [counterOne]);
+    // }
+
+    const isEven = React.useMemo(() => {
+        let i = 0
+        while (i < 2000000000) i++
+        return counterOne % 2 === 0
+    }, [counterOne]);
 
     return (
         <div className='app'>
             <div className='mt-5 mb-3'>
             <button onClick={incrementOne}>Count One - {counterOne}</button>
-            <span>{isEven() ? 'Even' : 'Odd'}</span>
+            <span>{isEven ? 'Even' : 'Odd'}</span>
             </div>
             <div>
             <button onClick={incrementTwo}>Count Two - {counterTwo}</button>

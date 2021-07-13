@@ -9,5 +9,5 @@ const Title = (props: any) => {
     );
 };
 
-export default Title;
-// export default React.memo(Title);
+// export default Title;
+export default React.memo(Title);

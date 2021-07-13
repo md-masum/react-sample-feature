@@ -6,5 +6,5 @@ const Button = (props: any) => {
   return <button onClick={handleClick}>{children}</button>;
 };
 
-export default Button;
-// export default React.memo(Button);
+// export default Button;
+export default React.memo(Button);

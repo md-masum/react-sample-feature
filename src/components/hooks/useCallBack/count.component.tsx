@@ -10,5 +10,5 @@ const Count = (props: any) => {
     );
 };
 
-export default Count;
-// export default React.memo(Count);
+// export default Count;
+export default React.memo(Count);

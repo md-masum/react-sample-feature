@@ -33,7 +33,7 @@ const MonsterMain = (props: any) => {
 
   return (
     <div className="App">
-      <h1> Monsters Rolodex </h1>
+      <h1> Monsters </h1>
       <Search
         placeholder="search robot"
         handleChange={(e: any) => setSearch(e.target.value)}
